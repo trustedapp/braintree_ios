@@ -70,7 +70,7 @@ Pod::Spec.new do |s|
     s.source_files  = "Braintree/UI/**/*.{h,m}"
     s.compiler_flags = "-Wall -Wextra"
     s.frameworks = "UIKit"
-    s.resource_bundle = { "Braintree-UI-Localization" => "Braintree/UI/Localization/*.lproj" }
+    s.resource = "Braintree/UI/Localization/*.lproj"
     s.dependency "Braintree/API"
   end
 
