@@ -67,9 +67,10 @@ Pod::Spec.new do |s|
     s.source_files  = "BraintreeUI/**/*.{h,m}"
     s.public_header_files = "BraintreeUI/Public/*.h"
     s.frameworks = "UIKit"
-    s.resource_bundles = {
-      "Braintree-UI-Localization" => ["BraintreeUI/Localization/*.lproj"],
-      "Braintree-Drop-In-Localization" => ["BraintreeUI/Drop-In/Localization/*.lproj"] }
+    s.resources = [
+      "BraintreeUI/Localization/*.lproj",
+      "BraintreeUI/Drop-In/Localization/*.lproj"
+    ]
     s.dependency "Braintree/Core"
     s.dependency "Braintree/Card"
   end
@@ -80,7 +81,7 @@ Pod::Spec.new do |s|
     s.frameworks = "UIKit"
     s.dependency "Braintree/Core"
     s.dependency "Braintree/Card"
-    s.resource_bundle = { "Braintree-3D-Secure-Localization" => "Braintree3DSecure/Localization/*.lproj" }
+    s.resources = [ "Braintree3DSecure/Localization/*.lproj" ]
   end
 
   s.subspec "PayPalOneTouch" do |s|
